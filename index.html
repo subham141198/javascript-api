@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- font awesome linked -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>AI-Univese-Hub</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+    body {
+      font-family: "Work Sans", sans-serif;
+    }
+
+    .modal-body .description .heading {
+      font-weight: 600;
+      font-size: 25px;
+    }
+
+    .modal-body .description {
+      background-color: #eb57575d;
+      border-radius: 16px;
+      border: solid 1px #eb5757;
+    }
+
+    .price:first-child {
+      color: #03a30a;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .price:nth-child(2) {
+      color: #f28927;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .price:last-child {
+      color: #eb5757;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 25px;
+    }
+
+    .modal-body .banner {
+      padding: 25px;
+      border-radius: 16px;
+      border: solid 1px #e7e7e7;
+    }
+
+    .modal-body .banner img {
+      border-radius: 16px;
+    }
+
+    .modal-body {
+      padding: 100px;
+    }
+
+    .banner .acc-scr {
+      right: -235px;
+    }
+
+    .banner .acc-scr span {
+      display: flex;
+      border-radius: 8px;
+      width: 140px;
+      height: 32px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-header .btn-close {
+      background-color: red;
+      border-radius: 50%;
+      padding: 0.5rem 0.5rem;
+      margin: -2.5rem -1.5rem -0.5rem auto;
+    }
+
+    .modal-opener {
+      background-color: rgba(235, 87, 87, 0.12);
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #eb5757;
+    }
+  </style>
+</head>
+
+<!-- <body onload="fetchAllCatagories()"> -->
+<!-- header add -->
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 text-center d-block w-100">AI Universe Hub</span>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section>
+      <div class="w-100 d-flex justify-content-center mb-5">
+        <button id="sort-by-date" class="btn btn-danger p-3 rounded-5" type="submit">
+          Sort By Date
+        </button>
+      </div>
+
+      <div id="data-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3   g-4">
+
+      </div>
+    </section>
+    <div class="w-100 d-flex justify-content-center mb-5">
+      <button id="show-more" class="btn btn-danger p-3 rounded-5 mt-5 d-none" type="submit">
+        Show More
+      </button>
+    </div>
+  </main>
+
+  <!-- modal added -->
+
+  <div class="modal fade" id="newsDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- jquery added -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<!-- Bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+  integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- js file added -->
+<script src="script.js"></script>
+
+</html>
